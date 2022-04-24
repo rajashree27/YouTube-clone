@@ -66,7 +66,9 @@ function showVideo(el) {
 		let iframe = document.createElement("iframe");
 		iframe.src = `https://www.youtube.com/embed/${videoId}`;
 		iframe.style =
-			'width="560";height="315";allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-inpicture"allowfullscreen';
+			'width="560";height="315";allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-inpicture";allowfullscreen';
+
+		iframe.allow = "fullscreen";
 
 		channelTitle = " | " + channelTitle;
 		box.append(iframe, title, channelTitle);
