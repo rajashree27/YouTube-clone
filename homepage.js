@@ -6,7 +6,7 @@ const popularVideos = async () => {
 		const res = await fetch(url);
 
 		const data = await res.json();
-		appendData(data.items);
+		appendData(data.items);	
 		console.log(data.items);
 	} catch (err) {
 		console.log(err);
@@ -58,7 +58,6 @@ let appendData = (data) => {
 
 function showVideo(el) {
 	document.getElementById("display-videos").innerHTML = "";
-	console.log("hello");
 	el.map(({ id: { videoId }, snippet: { channelTitle, title } }) => {
 		let box = document.createElement("div");
 		box.style = "width:80%;height:auto";
